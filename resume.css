@@ -1,0 +1,153 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif; /* Traditional, clean resume typeface */
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background-color: #f4f4f9;
+    padding: 40px 0;
+}
+
+/* Page Container - Mimics 0.4in margins */
+.resume-container {
+    width: 210mm; /* A4 Width */
+    min-height: 297mm; /* A4 Height */
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0.4in;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Section Structural Layout */
+section {
+    margin-top: 15px;
+}
+
+h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin-bottom: 8px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+/* Alignment Blocks */
+.entry {
+    margin-bottom: 8px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.date {
+    font-weight: normal;
+}
+
+.details {
+    margin-left: 0px;
+}
+
+.project-title {
+    margin-bottom: 2px;
+}
+
+/* Lists and Bullets */
+.skills-list {
+    list-style: none;
+}
+
+.skills-list li {
+    margin-bottom: 4px;
+}
+
+.bullet-list {
+    padding-left: 20px;
+}
+
+.bullet-list li {
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.right-align {
+    float: right;
+}
+
+/* Download Action Button Styling */
+#print-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: sans-serif;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#print-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Print Specific Overrides (Ensures perfect PDF Export) */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        padding: 0;
+        width: 100%;
+        min-height: auto;
+    }
+
+    #print-btn {
+        display: none; /* Hides download button on the output PDF */
+    }
+}
